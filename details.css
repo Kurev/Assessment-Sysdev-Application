@@ -33,6 +33,10 @@ body {
   width: 100%;
 }
 
+.mobile-case-smaller-screenSize {
+  display: none;
+}
+
 .section1 {
   display: flex;
   flex-direction: column;
@@ -124,16 +128,16 @@ option {
 }
 
 .circle-selected {
-    width: 33px;
-    height: 34px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid #06c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: -3px;
+  width: 33px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #06c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -3px;
 }
 
 .color-selection .circle:nth-child(1) {
@@ -172,8 +176,6 @@ option {
 .color-selection .circle:nth-child(12) {
   background-color: #4e5c6e;
 }
-
-
 
 .section3 p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -243,17 +245,31 @@ ul li {
   margin-right: 10px;
 }
 
-.section3-details button {
+.section3-details a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 0;
   border: none;
   outline: none;
   background-color: #06c;
   color: #fff;
   border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: small;
 }
 
-.img-cont img {
-  width: 36rem;
+.section3-details a:hover {
+  background-color: #0066ccbf;
+}
+
+.mobile-case-smaller-screenSize .img-cont, .case-colorSelection{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .case-colorSelection {
@@ -273,4 +289,58 @@ ul li {
 .case-selected {
   border-bottom: 2px solid #707075;
   padding-bottom: 5px;
+}
+
+@media screen and (max-width: 1316px) {
+  body {
+    padding: 0 7%;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  body {
+    padding: 0 4%;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .mobile-case {
+    display: none;
+  }
+
+  .mobile-case-smaller-screenSize {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 572px) {
+  .img-cont img{
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 503px) {
+  .img-cont img{
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 416px) {
+  .img-cont img{
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .case-colorSelection img{
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media screen and (max-width: 356px) {
+  .case-colorSelection img{
+    width: 1.9rem;
+  }
 }
